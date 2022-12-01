@@ -25,6 +25,13 @@
     padding: 0;
   }
 
+  ul {
+    list-style: none;
+    padding: none;
+    margin: 0 auto;
+    padding-inline-start: 0px;
+  }
+
 
 
 /*----------- Header -----------*/
@@ -59,7 +66,7 @@
     align-content: center;
 }
 
-.test-result__diagram {
+.test-diagram {
     position: relative;
     text-align: center;
     margin: 0 auto;
@@ -73,7 +80,7 @@
   grid-row-end: -1;
 }
 
-.test-result-calc {
+.test-diagram__description {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -85,12 +92,12 @@
     grid-row-end: -1;
 }
 
-.test-result__percent {
+.test-diagram__percent {
     text-align: center;
     width: 150px;
 }
 
-.test-result__diagram::before {
+.test-diagram::before {
     content: "";
     position: absolute;
     margin: 0 auto;
@@ -103,7 +110,7 @@
             mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
 }
 
-.test-result__diagram::after {
+.test-diagram::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -117,11 +124,11 @@
             mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
 }
 
-.test-result-calc {
+.test-diagram__description {
     text-align: center;
 }
 
-.test-result__number {
+.test-diagram__number {
     font-size: 48px;
     font-weight: 700;
 }
@@ -137,15 +144,36 @@
     color: #1B1B1C;
 }
 
-.buttom--dashboard::before {
+.button::before {
     content: '';
     display: inline-block;
-    background-image: url(/Users/Anastasia/Frontend/inDrive/img/dashboard.svg);
     background-size: cover;
-    width: 23px;
-    height: 16px;
     vertical-align: middle;
     margin-right: 8px;
+}
+
+.button--dashboard::before {
+    background-image: url(/Users/Anastasia/Frontend/inDrive/img/dashboard.svg);
+    width: 23px;
+    height: 16px;
+}
+
+.button--new::before {
+    background-image: url(/Users/Anastasia/Frontend/inDrive/img/play.svg);
+    width: 16px;
+    height: 15px;
+}
+
+.button--restart::before {
+    background-image: url(/Users/Anastasia/Frontend/inDrive/img/refresh.svg);
+    width: 18px;
+    height: 18px;
+}
+
+.button--done::before {
+    background-image: url(/Users/Anastasia/Frontend/inDrive/img/check.svg);
+    width: 18px;
+    height: 18px;
 }
 
 
@@ -161,4 +189,57 @@
 .test-result-description__text {
     text-align: left;
     padding-bottom: 50px;
+}
+
+
+/*------------ Dashboard -------------*/
+
+.tests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: inherit;
+    padding: 20px 0;
+}
+
+.test {
+    width: 310px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+    display: flex;
+    padding: 14px 8px;
+    align-items: center;
+    gap: 8px;
+}
+
+.test-diagram--small {
+    width: 70px;
+    height: 70px;
+}
+
+.test-diagram--small::before {
+    width: 70px;
+    height: 70px;
+}
+
+.test-diagram--small::after {
+    width: 70px;
+    height: 70px;
+}
+
+.test-diagram__number--small {
+    font-size: 20px;
+}
+
+.test-diagram__description--small {
+    width: 80px;
+}
+
+.test__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
