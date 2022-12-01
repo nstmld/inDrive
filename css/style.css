@@ -153,25 +153,25 @@
 }
 
 .button--dashboard::before {
-    background-image: url(/img/dashboard.svg);
+    background-image: url(img/dashboard.svg);
     width: 23px;
     height: 16px;
 }
 
 .button--new::before {
-    background-image: url(/img/play.svg);
+    background-image: url(img/play.svg);
     width: 16px;
     height: 15px;
 }
 
 .button--restart::before {
-    background-image: url(/img/refresh.svg);
+    background-image: url(img/refresh.svg);
     width: 18px;
     height: 18px;
 }
 
 .button--done::before {
-    background-image: url(/img/check.svg);
+    background-image: url(img/check.svg);
     width: 18px;
     height: 18px;
 }
