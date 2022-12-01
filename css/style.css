@@ -176,6 +176,10 @@
     height: 18px;
 }
 
+.button--done {
+    opacity: .2;
+}
+
 
 
 /*----------- Test result description (footer) -----------*/
@@ -242,4 +246,12 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+}
+
+.test--disable {
+    background-color: #0000;
+}
+
+.test-result--new {
+    opacity: .3;
 }
