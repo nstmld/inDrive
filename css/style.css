@@ -1,0 +1,164 @@
+/*----------- General -----------*/
+
+  body {
+    font-family: 'NotoSans', 'Arial', sans-serif;
+    font-weight: 400;
+    background-color: #F7F8F7;
+    color: #1B1B1C;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  @media (min-width: 768px){
+    body {
+      width: 768px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+/*----------- Header -----------*/
+.page-header {
+    background-color: #fff;
+    border-radius: 0 0 40px 40px;
+    display: flex;
+    min-height: 75px;
+    padding: 0 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header__logo {
+    height: 40px;
+    width: auto;
+}
+
+.page-header__description {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: .5;
+    text-align: right;
+}
+
+
+
+/*----------- Test Result -----------*/
+.test-result {
+    display: grid;
+    align-self: center;
+    align-content: center;
+}
+
+.test-result__diagram {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    margin: 5px;
+    width: 280px;
+    height: 280px;
+    grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.test-result-calc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+}
+
+.test-result__percent {
+    text-align: center;
+    width: 150px;
+}
+
+.test-result__diagram::before {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--diagram-color) calc(var(--percentage)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
+}
+
+.test-result__diagram::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(#D9D9D9 calc(100*100%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - 4px),#000 calc(100% - 4px));
+}
+
+.test-result-calc {
+    text-align: center;
+}
+
+.test-result__number {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+
+/*----------- Button -----------*/
+.button{
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: #1B1B1C;
+}
+
+.buttom--dashboard::before {
+    content: '';
+    display: inline-block;
+    background-image: url(/Users/Anastasia/Frontend/inDrive/img/dashboard.svg);
+    background-size: cover;
+    width: 23px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+
+/*----------- Test result description (footer) -----------*/
+.test-result-description {
+    background-color: #fff;
+    border-radius: 40px 40px 0 0;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+}
+
+.test-result-description__text {
+    text-align: left;
+    padding-bottom: 50px;
+}
