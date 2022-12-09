@@ -1,6 +1,8 @@
 /*----------- General -----------*/
 
-  body {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); 
+
+body {
     font-family: 'NotoSans', 'Arial', sans-serif;
     font-weight: 400;
     background-color: #F7F8F7;
@@ -8,9 +10,16 @@
     padding: 0;
     margin: 0 auto;
     font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 100vh;
   }
 
@@ -27,9 +36,9 @@
 
   ul {
     list-style: none;
-    padding: none;
     margin: 0 auto;
-    padding-inline-start: 0px;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px;
   }
 
 
@@ -38,11 +47,17 @@
 .page-header {
     background-color: #fff;
     border-radius: 0 0 40px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 75px;
     padding: 0 32px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .page-header__logo {
@@ -61,34 +76,53 @@
 
 /*----------- Test Result -----------*/
 .test-result {
+    display: -ms-grid;
     display: grid;
-    align-self: center;
-    align-content: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 .test-diagram {
     position: relative;
     text-align: center;
     margin: 0 auto;
-    aspect-ratio: 1;
     margin: 5px;
     width: 280px;
     height: 280px;
-    grid-column-start: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  -ms-grid-column-span: -2;
   grid-column-end: -1;
-  grid-row-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: -2;
   grid-row-end: -1;
 }
 
 .test-diagram__description {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-column-start: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: -2;
     grid-column-end: -1;
-    grid-row-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-row-span: -2;
     grid-row-end: -1;
 }
 
@@ -186,7 +220,8 @@
 .test-result-description {
     background-color: #fff;
     border-radius: 40px 40px 0 0;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     padding: 32px;
 }
 
@@ -199,8 +234,13 @@
 /*------------ Dashboard -------------*/
 
 .tests-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 12px;
     height: inherit;
     padding: 20px 0;
@@ -211,10 +251,15 @@
     height: auto;
     background-color: #fff;
     border-radius: 30px;
-    filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+    -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.1));
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 14px 8px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 8px;
 }
 
@@ -242,9 +287,16 @@
 }
 
 .test__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 8px;
 }
 
